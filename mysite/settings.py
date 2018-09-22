@@ -25,7 +25,7 @@ SECRET_KEY = 'hsqlh%lb#in2mp*$yf2%sf^$lcz$pfv0+2^f)y@iuill&u8jdt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
