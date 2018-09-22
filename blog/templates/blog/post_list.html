@@ -1,27 +1,11 @@
-<html>
-    <head>
-<link crossorigin="anonymous" media="all" integrity="sha512-/yZA7MGD9acBi5MmgjnivwjGeiNsmimsI/bhLlK7akrRuw+hMxNpJoQEMO9Zt0Nq6ZRu1m1NGV6r95Ib0zx7Qw==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-1ca00d32d1a8adc78ae7bb6677410eb1.css" />  
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Pat-Django Girls Blog</a></h1>
-        </div>
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-        <div>
-            <p>published: september 22 2018</p>
-            <h2><a href="">Every journey needs a first step</a></h2>
-            <p>I'm glad I did it!</p>
-            <p>this workshop it's great! Thanks!!!</p>
-                    </div>
-        <div>
-            <h2><a href="">Are you Tired?</a></h2>
-            <em> <p>Yep!</p> </em>
-        </div>
-
-        <div>
-            <h2><a href="">Next Step?</a></h2>
-            <p>Good question!</p>
-        </div>
-    </body>
-</html>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
